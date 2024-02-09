@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My birthday</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="flex flex-col justify-center items-center h-screen px-4">
+    <div class="countdown-container space-y-4 mb-4 text-center">
+        <div class="flex flex-wrap justify-center items-end space-x-2 space-y-4">
+            <div class="number-card w-32 h-40 sm:w-48 sm:h-56">
+                <span id="days" class="text-4xl sm:text-6xl">00</span>
+                <span class="label">DIAS</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="number-card w-32 h-40 sm:w-48 sm:h-56">
+                <span id="hours" class="text-4xl sm:text-6xl">00</span>
+                <span class="label">HORAS</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="number-card w-32 h-40 sm:w-48 sm:h-56">
+                <span id="minutes" class="text-4xl sm:text-6xl">00</span>
+                <span class="label">MINUTOS</span>
+            </div>
+            <div class="colon">:</div>
+            <div class="number-card w-32 h-40 sm:w-48 sm:h-56">
+                <span id="seconds" class="text-4xl sm:text-6xl">00</span>
+                <span class="label">SEGUNDOS</span>
+            </div>
+        </div>
+        <div class="text-center mg-top">
+            <div class="text-3xl font-bold text-white">CONFIRME SUA PRESENÇA NO <br>MEU ANIVERSÁRIO!</div>
+            <p class="text-lg">5 de abril</p>
+            <button class="button" id="openModalBtn">QUERO IR</button>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirme sua Presença</h2>
+            <form id="confirmPresenceForm">
+                <input type="text" class="form-input" placeholder="Seu Nome" required /><br>
+                <input type="email" class="form-input" placeholder="Seu Email" required /><br>
+                <textarea class="form-input" placeholder="Mensagem (Opcional)"></textarea><br>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+
+</html>
